@@ -26,12 +26,14 @@
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-                <ListBox Name="MainListBox" Background="Silver" Margin="6">
-                </ListBox>
+
+            <ScrollViewer  Grid.Column="0" Grid.ColumnSpan="3" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <Grid>
+                    <ListBox Name="MainListBox" Background="Silver" Margin="6" BorderBrush="#00ABADB3"></ListBox>
+                </Grid>
             </ScrollViewer>
 
-            <GridSplitter Grid.Column="1" ShowsPreview="False" Width="3" HorizontalAlignment="Center" VerticalAlignment="Stretch" ></GridSplitter>
+            <!--<GridSplitter Grid.Column="1" ShowsPreview="False" Width="3" HorizontalAlignment="Center" VerticalAlignment="Stretch" ></GridSplitter>
             
             <Grid Panel.ZIndex="1"  Grid.Row="1" Grid.Column="3">
                 <Grid.RowDefinitions>
@@ -46,7 +48,7 @@
                 <TextBlock Grid.Row="1"  Margin="3" x:Name="OurPath">
                     
                 </TextBlock>
-            </Grid>
+            </Grid>-->
         </Grid>
 
         <Grid Panel.ZIndex="1" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2">
@@ -55,7 +57,7 @@
                     <Run  FontSize="30">Настройки</Run>
                 </Expander.Header>
                 <StackPanel Background="#FF1E1E1E">
-                    <DockPanel LastChildFill="false" MinHeight="30" Margin="5, 10">
+                    <!--<DockPanel LastChildFill="false" MinHeight="30" Margin="5, 10">
                         <TextBlock>
                         <Run FontSize="20">Метод решения:</Run>
                         </TextBlock>
@@ -64,7 +66,7 @@
                             <TextBlock>Жадный метод</TextBlock>
                             <TextBlock>Жадный метод с возвратом</TextBlock>
                         </ComboBox>
-                    </DockPanel>
+                    </DockPanel>-->
                     <DockPanel LastChildFill="false" MinHeight="30" Margin="5, 10">
                         <TextBlock>
                         <Run FontSize="20">Количество графов:</Run>
@@ -184,7 +186,7 @@
                             <TextBlock>5</TextBlock>
                             <TextBlock>6</TextBlock>
                             <TextBlock>7</TextBlock>
-                            <TextBlock>8</TextBlock>
+                            <!--<TextBlock>8</TextBlock>
                             <TextBlock>9</TextBlock>
                             <TextBlock>10</TextBlock>
                             <TextBlock>11</TextBlock>
@@ -276,7 +278,7 @@
                             <TextBlock>97</TextBlock>
                             <TextBlock>98</TextBlock>
                             <TextBlock>99</TextBlock>
-                            <TextBlock>100</TextBlock>
+                            <TextBlock>100</TextBlock>-->
                         </ComboBox>
                     </DockPanel>
                     <DockPanel LastChildFill="false" MinHeight="30" Margin="5, 10">

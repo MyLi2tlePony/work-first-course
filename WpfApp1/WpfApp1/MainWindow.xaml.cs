@@ -20,11 +20,11 @@ namespace WpfApp1
 {
     public partial class MainWindow : Window
     {
-        private string methodDecision;
         private int numberOfGraph;
         private int numberOfVertex;
         private int maxLength;
         private double density;
+        private static bool isItFirst;
         
         static TextBox getAnsver;
         List<FindPath> all = new List<FindPath> { };
@@ -36,7 +36,11 @@ namespace WpfApp1
 
         private void ButtonBegin_Click(object sender, RoutedEventArgs e)
         {
-            ShowAnswer();
+            if (isItFirst)
+            {
+                isItFirst = false;
+                ShowAnswer();
+            }
         }
 
         //Выводит ответ
@@ -124,7 +128,6 @@ namespace WpfApp1
         //Получает значения из настроек
         private void SelectionChanged()
         {
-            methodDecision = MethodDecision.Text;
             numberOfGraph = Convert.ToInt32(NumberOfGraph.Text);
             numberOfVertex = Convert.ToInt32(NumberOfVertex.Text);
             maxLength = Convert.ToInt32(MaxLength.Text);
@@ -134,6 +137,8 @@ namespace WpfApp1
         //Создает массивы и выводит их
         private void ButtonCreate_Click(object sender, RoutedEventArgs e)
         {
+            isItFirst = true;
+
             //Получает значения из настроек
             SelectionChanged();
 
